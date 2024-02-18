@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Creating Elements and appending them to parent elements</title>
+
+    <style>
+        * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+             text-decoration: none;
+             font-family: "Inter", sans-serif;
+        }
+        html, body{ 
+             width: 100%;
+             height: 100%;
+        }
+        header{
+            width: 100%;
+            background: blueviolet;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline: 20px;
+        }
+        header .logo{
+            color: white;
+            font-weight: 600;
+            font-size: 28px;
+            padding: 20px;
+        }
+        header a{
+            color: white;
+            font-size: 19px;
+            padding: 8px;
+            font-weight: 500;
+        }
+        section{
+            width: 100%;
+            height: 100%;
+            padding-inline: 40px;
+        }
+        section > p{
+            padding-block: 12px;
+            font-size: 19px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Brand Name</div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Explore</a>
+        </div>
+    </header>
+
+    <section id="section">
+        <p id="pTag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae harum repellat tenetur? Rem ipsa adipisci temporibus iure debitis sed repellendus, iste qui optio, aliquid dicta iusto ullam sunt accusamus delectus.</p>
+    </section>
+
+    <script>
+
+        var section = document.getElementById("section");
+        var p = document.getElementById("pTag");
+
+        for(var i = 1; i<= 20; i++){
+            var newPTag = document.createElement("p");
+            newPTag.innerText = p.innerText; 
+            section.append(newPTag);
+        }
+    
+    </script>
+</body>
+</html>

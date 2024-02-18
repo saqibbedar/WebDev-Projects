@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #1c1c1c;
+}
+
+body {
+    width: 100%;
+    height: 100%;   
+    font-family:    popins, sans-serif;
+    background: #F6F6F8;
+    }
+a{
+    text-decoration: none;
+    transition: all 4.s ease 2s;
+}
+li{
+    list-style: none;
+}
+a:hover{
+    opacity: .6;
+}
+#navbar{
+    position: fixed;
+    background: #F6F6F8;
+    height: 12vh;
+    padding-inline: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+.logo{
+    font-weight: 700;
+    font-size: 28px;
+}
+.navmenu a{
+    font-weight: 500;
+    font-size: 20px;
+    margin-inline: 12px;
+}
+#welcome-section{
+    background-size: cover;
+    background-position: center;
+    background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1rg9ij95VkfNi68UMvLtZx7zCUOwXdJZCToTirrBdO3AmfdZ1n4-sE2WQ27hwGyB3piwvNstpIYODzrlFXFrmAnEoQp3Sk8bHMkbThuSii1zzfhgBy4ibUEPF-5cnnCRky8okwHDlyYbP6mrx0PCgw6t3qAegRxNA6qN4wQ3vsFzCvKTKty7yvtT6fUU_/s1600/image2.webp), rgb(42 45 157 / 82%);
+    background-blend-mode: multiply;
+    height: 100vh;
+    position: relative;
+}
+.centerImg {
+    display: flex;
+    justify-content: center;
+}
+.avatar {
+    overflow: hidden;
+    width: 135px;
+    border-radius: 50%;
+    transform: translate(8px,0);
+    height: 135px;
+    background: #beb7e0;
+}
+.avatar img {
+    height: 130px;
+    transform: scale(1.7);
+    margin-top: 48px;
+}
+.centerTxt{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centerTxt h1{
+    font-size: 59px;
+    font-weight: 900;
+    display: block;
+    color: white;
+}
+.centerTxt p{
+    font-size: 23px;
+    font-weight: 500;
+    font-style: italic;
+}
+.centerTxt h1, .centerTxt p, #projects h1, #projects p, .card h2{
+    text-align: center;
+}
+#projects p {
+    color: #353535;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: -10px;
+    margin-top: 54px;/* change it */
+}
+#projects h1{
+    font-size: 58px;
+    font-weight: 900;
+    display: block;
+    background-image: linear-gradient(150deg, #a948d7 35%,#ff00aa 92%);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 23px; /* change it later */
+    margin-bottom: 50px; /* change it later */
+}
+.card{
+    width: 315px;
+    /* height: 400px; */
+    height: 327px;
+    background-color: #1b1c23;
+    animation: animee infinite 3s 2s;
+}
+/* animations */
+
+.projectImg{
+    width: 100%;
+    height: 180px;
+    margin-bottom: 15px;
+}
+.card h2{
+    color:white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#viewbtn {
+    display: block;
+    padding: 11px;
+    width: 40%;
+    margin: 0 auto;
+}
+#social-container{
+    height: 88vh;
+    background: linear-gradient(150deg, #a64fcffa 35%,#4200ffe3 92%);
+    position: relative;
+}
+.centerTxt-2{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#socialTitle{
+    text-align: center;
+    font-weight: 900;
+    font-size: 48px;
+}
+#subtitle{
+    text-align: center;
+    font-style: italic;
+    font-size: 23px;
+    font-weight: 500;
+}
+h5{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+h5, #subtitle, #socialTitle{
+    margin-block: 12px;
+    color: white;
+}
+footer{
+    height: 20vh;
+    background-color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#copyright{
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+@media (max-width:650px) {
+    #navbar{     
+        justify-content: center;
+    }
+}
+
+/* @media (max-width:650px) {
+    #navbar{
+        padding-inline: 14px;
+    }
+    .navmenu a {
+        font-size: 18px;
+    }
+    .logo {
+        font-weight: 600;
+        font-size: 23px;
+    }
+    .centerTxt h1 {
+        font-size: 35px;
+        font-weight: 700;
+        margin-top: 12px;
+    }
+    #projects h1{
+        font-size: 50px;
+        overflow: hidden;
+    }
+    #projects p{
+        font-size: 19px;
+    }
+    #socialTitle{
+        font-size: 30px;
+    }
+    h5{
+        font-size: 23px;
+    }
+} */

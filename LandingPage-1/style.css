@@ -1,0 +1,238 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+    color: white;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(at top, #573cb8, black 50%)
+}
+#navbar{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 12%;
+    overflow: hidden;
+}
+.navlogo{
+    width: 19%;
+}
+.navlogo h1{
+    /* font-size: 34px; */
+    font-weight: 900;
+    padding-left: 14px;
+    font-size: 30px;
+}
+#hamburger{
+    display: none;
+}
+.navlogo, .navMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navMenu{gap: 20px;
+    width: 65%;
+}
+.navMenu a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 9px;
+    transition: all .3s ease;
+}
+.navMenu a:hover{
+    color: black;
+    background-color: white;
+}
+.navIcons{
+    width:16% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+#main{
+    height: 88%;
+    width: 100%;
+    }
+.imgbox{
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 40%;
+}
+img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 0 0 9px 0px black;
+}
+/* .imgdes{
+    width: 45%;
+    position: absolute;
+    padding: 12px 15px;
+    position: absolute;
+    bottom: 19%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 59%;
+    padding: 11px 14px;
+    color: #fff;
+    background-image: radial-gradient(at center 50%, #573cb8, black 70%);
+    /* backdrop-filter: blur(8px); */
+    /* border-radius: 10px;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+.imgdes h1, span, p {
+    font-size: 12px;
+    text-align: center;
+} */
+.textbox{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    /* background-color: rgb(0, 170, 37); */
+}
+.textcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+}
+.textcenter h1{
+    font-weight: 900;
+    font-size: 65px;
+}
+.textcenter p{
+    font-size: 24px;
+    font-style: oblique;
+}
+.textcenter h1, p{
+    margin-bottom: 3px;
+}
+.socialIcons {
+    display: flex;
+    font-size: 26px;
+    gap: 12px;
+    padding: 10px 0px;
+}
+#largesec{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(at left bottom, #573cb8, black 70%);
+}
+.surprisetext{
+    position: relative;
+    display: flex;
+    height: 20%;
+}
+.surprisetext h2{
+    margin: 0 auto;
+    font-weight: 900;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+
+}
+.gallery{
+    background-color: crimson;
+    height: 75%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* #largesec h1:hover{
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: transparent;
+} */
+
+/* Responsive */
+@media (max-width:740px) {
+    .container{
+        background-image: radial-gradient(at left top, #573cb8, black 70%);
+    }
+    #largesec{
+        background-image: radial-gradient(at right bottom, #573cb8, black 70%);
+    }
+    .navlogo{
+        width: 80%;    
+    padding-left: 0;
+    justify-content: space-evenly;
+    }
+    #hamburger, a{
+        display: flex;
+        font-size: 28px;
+        text-decoration: none;
+    }
+    .navMenu{
+        width: 0%;
+        visibility: hidden;
+    }
+    .navIcons{
+        width:20% ;
+        }
+        #main{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .imgbox{
+            float: none;
+            height: 60%;
+            width: 100%;
+            overflow: hidden;
+        }
+        img{
+            height: 97%;
+        }
+        .textbox{
+            width: 100%;
+            height: 40%;
+            overflow: hidden;
+        }
+        .textcenter h1 {
+            font-size: 39px;
+        }
+        .textcenter h1, p, .socialIcons {
+            margin-bottom: 2px;
+            text-align: center;
+        }
+        .textcenter p {
+            font-size: 15px;
+        }
+        .socialIcons {
+            font-size: 25px;
+            padding: 7px 0px;
+            justify-content: center; 
+        }
+        .surprisetext h2{
+            font-weight: 600;
+            font-size: 24px;
+            padding: 0px 13px;
+        
+        }
+        .gallery{
+            position: relative;
+            top: 3%;
+            height: 70%;
+        }
+
+}

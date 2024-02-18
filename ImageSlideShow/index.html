@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/ImageSlideShow/src/main.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="goBack()" id="button1">
+            <svg id="btn1" aria-label="Prev" fill="currentColor" role="img" viewBox="0 0 24 24" ><title>Prev</title><path d="M21 17.502a.997.997 0 0 1-.707-.293L12 8.913l-8.293 8.296a1 1 0 1 1-1.414-1.414l9-9.004a1.03 1.03 0 0 1 1.414 0l9 9.004A1 1 0 0 1 21 17.502Z"></path></svg>
+        </button>
+        <div class="slideshow">
+            <img class="slide" src="https://picsum.photos/id/237/1000/500" alt="">
+            <img class="slide" src="https://picsum.photos/id/236/1000/500" alt=""> 
+            <img class="slide" src="https://picsum.photos/id/238/1000/500" alt="">
+            <img class="slide" src="https://picsum.photos/id/239/1000/500" alt=""> 
+        </div>
+        <button onclick="goNext()" id="button2">
+            <svg id="btn2" aria-label="Next" fill="currentColor" role="img" viewBox="0 0 24 24"><title>Next</title><path d="M21 17.502a.997.997 0 0 1-.707-.293L12 8.913l-8.293 8.296a1 1 0 1 1-1.414-1.414l9-9.004a1.03 1.03 0 0 1 1.414 0l9 9.004A1 1 0 0 1 21 17.502Z"></path></svg>
+        </button>
+    </div>
+    <script src="/ImageSlideShow/src/script.js" defer></script>
+</body>
+</html>

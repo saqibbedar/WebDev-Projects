@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Typing Animation</title>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <style>
+        h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>I am <Span id="typed" style="color:blueviolet"></Span></h1>
+</body>
+<script>
+    var typed = new Typed("#typed",{
+        strings: ["Programmer", "Digital Creator", "Tech Enthusiastic"],
+        typeSpeed : 40,
+        backSpeed : 15,
+        loop : true
+    })
+</script>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .copyText::after {
+            content: '  </html>';
+            position: relative;
+            bottom: 0px;
+            padding-inline: 6px 0;
+            color: gray;
+        }
+        
+        .codeBox {
+            position: relative;
+            border: 1px solid #000;
+            padding: 15px 19px;
+            padding-bottom: 0;
+            overflow-y: auto;
+            max-height: auto;
+            scrollbar-width: thin;
+            scrollbar-color: gray;
+        }
+        
+        .codeBox::-webkit-scrollbar {
+            height: 5px;
+        }
+        
+        .codeBox::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .codeBox::-webkit-scrollbar-thumb {
+            background-color: gray;
+            border-radius: 5px;
+        }
+        
+        .copyTextWrapper {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 12px 0px;
+            z-index: 3;
+        }
+        
+        .copyText {
+            font-size: 10px;
+            color: gray;
+            margin-right: 10px;
+        }
+        
+        pre#boxCode {
+            position: relative;
+            line-height: 18px;
+            font-size: 13px;
+        }
+    </style>
+    <title>Double Click to Copy Code!</title>
+</head>
+<body>
+    <div class="codeBox">
+        <div class="copyTextWrapper">
+            <div class="copyText">Double click to copy the code</div>
+            <div class="copyText::after"></div>
+        </div>
+        <pre id="boxCode">
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        </pre>
+    </div>
+
+    <script>
+        const codeElement = document.getElementById('boxCode');
+
+        codeElement.addEventListener('dblclick', () => {
+            copyToClipboard(codeElement.textContent);
+            showCopyMessage();
+        });
+
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+        }
+
+        function showCopyMessage() {
+            const copyTextElement = document.querySelector('.copyText');
+            copyTextElement.innerHTML = 'Code copied!';
+            setTimeout(() => {
+                copyTextElement.innerHTML = 'Double click to copy the code';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
+

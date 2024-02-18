@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+
+    <style>
+        * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+             font-family: 'Gilroy';
+             text-decoration: none;
+             background: black;
+             color: white;
+        }
+        html, body{
+             width: 100%;
+             height: 100%;
+        }
+    .main{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px;
+    }
+    .main :where(h1, h2, h3){
+        text-align: center;
+    }
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <h1>Hello World</h1>
+        <h2>Url: <h3 id="url"></h3></h2>
+    </div>
+</body>
+
+<script>
+    
+    let url = document.URL;
+    document.getElementById("url").innerText = url;
+
+</script>
+
+</html>

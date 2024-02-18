@@ -1,0 +1,46 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: system-ui;  /* Change font-family */
+     text-decoration: none;
+}
+html, body{
+     width: 100%;
+     height: 100%;
+     background: #000;
+}
+:root{
+    --color: blueviolet;
+}
+.button{
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-weight: 900;
+    color: white;
+    border: 2px solid var(--color);
+    padding-inline:10px;
+    border-radius: 12px;
+
+    position: relative;
+    isolation: isolate;
+}
+.button:after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    inset: 0;
+    border-radius: 5px;
+
+    scale: 0 1; /*change it to .5 1  */
+    transform-origin: right; /* remove it if you want start from middle  */
+    transition: scale 450ms;
+}
+.button:hover::after,
+.button:focus-visible::after{
+    scale: 1 1;
+    transform-origin: left; /* Also this one  */
+}

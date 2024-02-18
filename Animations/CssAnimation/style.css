@@ -1,0 +1,58 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     text-decoration: none;
+}
+html, body{
+     width: 100%;
+     height: 100%;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+section:nth-child(odd){
+    background: red;
+    .main{
+        color: white;
+    };
+}
+section:nth-child(even){
+    .main{
+        color: white;
+    };
+}
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:100px;
+}
+@layer customAnimation{
+    .main{
+        animation: 1s ease-in-out both;
+        animation-timeline: view();
+        animation-range: entry;
+        overflow: hidden;
+    }
+    .main{
+        animation-name: anim;
+    }
+}
+@keyframes anim {
+    0% {
+        transform: scale(3);
+        opacity: 0;
+        filter: blur(3px);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}

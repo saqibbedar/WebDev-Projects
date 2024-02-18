@@ -1,0 +1,125 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: system-ui;
+     text-decoration: none;
+}
+html, body{
+     width: 100%;
+     height: 100%;
+}
+:root{
+    --font-color: black;
+    --bg-color: black;
+    --transition1: all .3s ease;
+    --shadow: 0 0 9px rgba(0, 0, 0, 0.342);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    z-index: 100;
+}
+.navIcon{
+    position: absolute;
+    top: 4vw;
+    right: 1rem;
+    display: none;
+    cursor: pointer;
+    border-radius: 8px;
+    border: solid 1px rgb(189, 189, 189);
+    padding: 6px 10px;
+    transition: var(--transition1);
+    
+}
+.navIcon svg{
+    margin-top: 4px;
+    width: 20px;
+}
+.navIcon:active, .navIcon:focus{
+    background: rgba(0, 0, 0, 0.247);
+    backdrop-filter: blur(6px);
+}
+.logo{
+    font-size: 4vw;
+    font-weight: 700;
+    margin: .8rem;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar li{
+    list-style: none;
+}
+.navbar li a{
+    color:var(--font-color);
+    display: block;
+    padding: 1.2rem;
+    font-size: 2vw;
+    transition: var(--transition1);
+}
+.navbar a:hover, .navbar a:focus{
+    background: rgba(178, 178, 178, 0.415);
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section:nth-child(even){
+    background: #333;
+}
+section:nth-child(odd){
+    background: #000;
+}
+section:nth-child(even) > h1{
+    font-size: 10vw;
+    color: white;
+}
+section:nth-child(odd) > h1{
+    font-size: 10vw;
+    color: white;
+}
+
+
+@media (width <= 550px) {
+    .navbar{
+        flex-direction: column;
+        align-items: start;
+        overflow: hidden;
+    }
+    .navIcon{
+        display: block;
+    }
+    .logo{
+        font-size: 8vw;
+    }
+    .navbar li a{
+        display: block;
+        width: 100%;
+        padding: .9rem;
+        font-size: 4vw;
+    }
+    .navbar-active{
+        left: 0% !important;
+        opacity: 1 !important;
+    }
+    .navbar ul{
+        position: absolute;
+        opacity: 0;
+        left:-100%;
+        top: 9%;
+        background: white;
+       flex-direction: column;
+       width: 100%;
+       transition: all 0.75s ease;
+    }
+    .navbar li{
+        text-align: center;
+    }
+}

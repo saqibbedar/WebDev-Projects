@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="copy" id="copytext" cols="10" style="width: 800px; height: fit-content; padding: 15px; outline: none;" readonly>This Text would be copied!</textarea><br>
+    <button id="copytoclipboard">Copy</button>
+
+    <script>
+       var copytext = document.getElementById('copytext')
+        var copybutton = document.getElementById('copytoclipboard')
+
+    //     navigator.clipboard.writeText(copytext)
+    // .then(() => {
+    //     alert('Text Copied Successfully!')
+    // })
+    // .catch((error) => {
+    //     alert.error("Unable to copy text: " + error);
+    // });
+
+
+        // copytext.addEventListener('dblclick', ()=>{
+        //         copytext.select()
+        //     document.execCommand('copy')
+        // })
+        
+        copybutton.addEventListener('click', ()=>{
+            copytext.select()
+            document.execCommand('copy')
+
+            copybutton.innerText = 'Copied Succesfully!'
+            setTimeout(()=>{
+                copybutton.innerText = 'Copy'
+            },2000)
+        })
+    </script>
+</body>
+</html>
