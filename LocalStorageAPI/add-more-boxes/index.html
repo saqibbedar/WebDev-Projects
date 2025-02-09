@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load More Boxes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+         
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            padding: 12px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .container{
+            width: 100%;
+            display: grid;
+            grid-gap: 1.5pc;
+            grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+        }
+        .boxes{
+            background: rgba(237, 237, 237, 0.849);
+            padding: 30px;
+            box-shadow: 0 1px 2px 1px rgba(61, 61, 61, 0.258);
+            border-radius: 6px;
+            font-size: 1.211rem;
+        }
+        button{
+            display: flex;
+            margin: 30px auto;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            background: springgreen;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        @media (width < 600px) {
+            .container{
+                grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
+
+            }
+        }
+    </style>
+</head>     
+<body>
+    <div class="container">
+        <div class="boxes">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias cum consequuntur officiis necessitatibus ipsam quas quibusdam quod provident, perspiciatis debitis facilis soluta error accusamus architecto repellat quis corrupti accusantium quae.
+        </div>
+    </div>
+    <button id="btn" title="create a box">Add Box</button>
+    <br><br>
+    <script>
+        let box = document.querySelector(".boxes");
+let button = document.getElementById("btn");
+
+const addNewBox = () => {
+    for(let i = 1; i <= 1; i++){
+        let newBox = box.cloneNode(true);
+        newBox.addEventListener("dblclick", removeBox); // Add event listener to new box
+        document.querySelector(".container").append(newBox);
+    }
+    // Save the current HTML of the container in local storage
+    localStorage.setItem('boxes', document.querySelector(".container").innerHTML);
+}
+
+// const removeBox = (event) => {
+//     event.target.remove(); // Remove the box
+//     // Update the local storage
+//     localStorage.setItem('boxes', document.querySelector(".container").innerHTML);
+// }
+
+const removeBox = (event) => {
+    let confirmDelete = confirm("Are you sure you want to delete this box?");
+    if (confirmDelete) {
+        event.target.remove(); // Remove the box
+        // Update the local storage
+        localStorage.setItem('boxes', document.querySelector(".container").innerHTML);
+    }
+}
+
+// Load the boxes from local storage when the page loads
+window.onload = () => {
+    let savedBoxes = localStorage.getItem('boxes');
+    if (savedBoxes) {
+        document.querySelector(".container").innerHTML = savedBoxes;
+        // Add event listener to each box
+        document.querySelectorAll(".boxes").forEach((box) => {
+            box.addEventListener("dblclick", removeBox);
+        });
+    }
+}
+
+button.addEventListener("click", addNewBox);
+
+
+    </script>
+</body>
+</html>
