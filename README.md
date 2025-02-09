@@ -18,6 +18,8 @@ Welcome to the Web Development Projects Collection! This repository houses a var
 | 3.2 | Animations - Button | [Preview →](https://saqibbedar.github.io/WebDev-Projects/Animations/Button%20Animation/index.html) |
 | 3.3 | Animations - CSS | [Preview →](https://saqibbedar.github.io/WebDev-Projects/Animations/CssAnimation/index.html) |
 | 3.4 | Animations - Typing.js | [Preview →](https://saqibbedar.github.io/WebDev-Projects/Animations/Typingjs%20Animation/index.html) |
+| 3.5 | Animations - Beautiful Cursor | [Preview →](https://saqibbedar.github.io/WebDev-Projects/Animations/mousemove/index.html) |
+| 3.6 | Animations - ImageSlider on mousemove event | [Preview →](https://saqibbedar.github.io/WebDev-Projects/Animations/moveImage-on-mousemove/index.html) |
 | 4 | Elements using Js | [Preview →](https://saqibbedar.github.io/WebDev-Projects/CreateElemsUsingLoop/index.html) |
 | 5 | Credential Cards | [Preview →](https://saqibbedar.github.io/WebDev-Projects/HTML%20Crendential%20Cards/index.html) |
 | 6 | Scale Image onClick | [Preview →](https://saqibbedar.github.io/WebDev-Projects/ImageScaleOnclick/index.html) |
@@ -26,11 +28,15 @@ Welcome to the Web Development Projects Collection! This repository houses a var
 | 9 | My first web Project | [Preview →](https://saqibbedar.github.io/WebDev-Projects/MyFirstWebProject/homePage.html) |
 | 10.1 | Onclick Copy Text | [Preview →](https://saqibbedar.github.io/WebDev-Projects/OnclickCopyText/index.html) |
 | 10.2 | Onclick Copy Text-2 | [Preview →](https://saqibbedar.github.io/WebDev-Projects/OnclickCopyText/onclickCopyText2.html) |
-| 10.3 | On dblclick Copy Text-2 | [Preview →](https://saqibbedar.github.io/WebDev-Projects/OnclickCopyText/dblclickToCopy/index.html) |
+| 10.3 | On doubleblclick Copy Text-2 | [Preview →](https://saqibbedar.github.io/WebDev-Projects/OnclickCopyText/dblclickToCopy/index.html) |
 | 11 | Onload Animation | [Preview →](https://saqibbedar.github.io/WebDev-Projects/Onload/index.html) |
 | 12 | Responsive Navbar | [Preview →](https://saqibbedar.github.io/WebDev-Projects/ResponsiveNavbar/index.html) |
 | 13 | Get Document URL | [Preview →](https://saqibbedar.github.io/WebDev-Projects/GetDocumentURL/01_URL.html) |
 | 14 | Progress Bar | [Preview →](https://saqibbedar.github.io/WebDev-Projects/ProgressBar/index.html) |
+| 15 | Fetch API - FakeUserData | [Preview →](https://saqibbedar.github.io/WebDev-Projects/FetchAPI/FakeUserData/index.html) |
+| 15 | LocalStorage API - Insert & Read Data | [Preview →](https://saqibbedar.github.io/WebDev-Projects/LocalStorageAPI/index.html) |
+| 15.1 | LocalStorage API - add-more-boxes | [Preview →](https://saqibbedar.github.io/WebDev-Projects/LocalStorageAPI/add-more-boxes/index.html) |
+| 15 | Search | [Preview →](https://saqibbedar.github.io/WebDev-Projects/Search/index.html) |
 
 ## Getting Started
 
