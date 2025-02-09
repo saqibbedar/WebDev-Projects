@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+ 
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+
+}
+a {
+    text-decoration: none;
+}
+.hide {
+    display: none;
+}
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 3rem;
+    background: white;
+    border-bottom: solid;
+    transition: padding 0.3s ease, position 0.99s ease;
+}
+.container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
+    padding: 25px;
+    gap: 20px;
+    justify-content: center;
+}
+.container > .users{
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background: #b2b0b047;
+    box-shadow: 0 0 9px #8e8e8e20;
+    transition: box-shadow 0.3s ease;
+}
+.container > .users > .username {
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: black;
+}
+.container > .users > .email {
+    font-size: 1.2rem;
+    margin-block: 8px;
+    color: #4d4d4d95;
+}
+.container > .users > .category {
+    font-size: 1rem;
+    color: #4d4d4d95;
+}
+@media (width < 800px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+}
