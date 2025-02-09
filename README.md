@@ -36,7 +36,7 @@ Welcome to the Web Development Projects Collection! This repository houses a var
 | 15 | Fetch API - FakeUserData | [Preview →](https://saqibbedar.github.io/WebDev-Projects/FetchAPI/FakeUserData/index.html) |
 | 15 | LocalStorage API - Insert & Read Data | [Preview →](https://saqibbedar.github.io/WebDev-Projects/LocalStorageAPI/index.html) |
 | 15.1 | LocalStorage API - add-more-boxes | [Preview →](https://saqibbedar.github.io/WebDev-Projects/LocalStorageAPI/add-more-boxes/index.html) |
-| 15 | Search | [Preview →](https://saqibbedar.github.io/WebDev-Projects/Search/index.html) |
+| 16 | Search | [Preview →](https://saqibbedar.github.io/WebDev-Projects/Search/index.html) |
 
 ## Getting Started
 
