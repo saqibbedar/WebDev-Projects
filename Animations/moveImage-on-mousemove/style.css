@@ -1,0 +1,48 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Gilroy";
+     color: white;
+     text-decoration: none;
+}
+html, body{
+     width: 100%;
+     height: 100%;
+}
+.main{
+    height: 100%;
+    width: 100vw;
+    position: relative;
+    background: #111;
+    padding: 25px;
+    overflow: hidden;
+    /* overflow: hidden; */
+}
+.elem{
+    width: 100%;
+    height: 130px;
+    border-bottom: solid 2px white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 12px;
+    position: relative;
+}
+.elem h1{
+    font-size: 6vw;
+    /* mix-blend-mode: difference;
+    z-index: 100; */
+}
+.elem img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .3s;
+    opacity: 0;
+    /* cursor: pointer; */
+}
