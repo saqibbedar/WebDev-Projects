@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Search</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>Search Tool</h1>
+    </div>    
+    <div class="search-container" data-search-container>
+            <input type="search" placeholder="Search" spellcheck="false" id="input" data-search>
+    </div>
+
+    <div class="data-container" data-card-container></div>
+
+    <template data-cards-template>
+        <div class="users">
+            <div class="header" data-header></div>
+            <div class="body" data-body></div>
+            <div class="category" data-category></div>
+        </div>
+    </template>
+
+    <script defer src="script.js"></script>
+</body>
+</html>
