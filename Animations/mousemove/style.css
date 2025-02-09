@@ -1,0 +1,35 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: gilroy;
+     text-decoration: none;
+     color: white;
+}
+html, body{
+     width: 100%;
+     height: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.cursor{
+    position: absolute;
+    background: white;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    mix-blend-mode: difference; /*Remember this property*/
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .2s ;
+}
+h1{
+    font-size: 9vw;
+    font-weight: 900;
+}
