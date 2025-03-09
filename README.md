@@ -37,6 +37,8 @@ Welcome to the Web Development Projects Collection! This repository houses a var
 | 15 | LocalStorage API - Insert & Read Data | [Preview →](https://saqibbedar.github.io/WebDev-Projects/LocalStorageAPI/index.html) |
 | 15.1 | LocalStorage API - add-more-boxes | [Preview →](https://saqibbedar.github.io/WebDev-Projects/LocalStorageAPI/add-more-boxes/index.html) |
 | 16 | Search | [Preview →](https://saqibbedar.github.io/WebDev-Projects/Search/index.html) |
+| 17 | PopUp On Button Click | [Preview →](https://saqibbedar.github.io/WebDev-Projects/pop-up-on-button-click/index.html) |
+| 18 | Interactive Web Elements | [Preview →](https://saqibbedar.github.io/WebDev-Projects/interactive-web-elements/index.html) |
 
 ## Getting Started
 
